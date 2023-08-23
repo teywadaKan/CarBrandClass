@@ -11,6 +11,7 @@ m = pickle.load(open(r'/carBrandClass/model/carModel.pkl','rb'))
 def root():
     return {"message": "this is car api"}
 
+# http://localhost:80/api/predict_car
 @app.get("/api/predict_car")
 async def read_img64(request:Request):
     item = await request.json()
